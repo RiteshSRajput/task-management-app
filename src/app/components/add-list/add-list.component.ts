@@ -13,6 +13,8 @@ export class AddListComponent {
   display: boolean = false;
   @Output()
   saveList = new EventEmitter<object>();
+  @Output()
+  cancel = new EventEmitter<string>();
   listName = new FormControl('');
   listForm = new FormGroup({
     listName: this.listName,
@@ -36,5 +38,8 @@ export class AddListComponent {
         }
       },
     });
+  }
+  closeModal() {
+    this.cancel.emit();
   }
 }

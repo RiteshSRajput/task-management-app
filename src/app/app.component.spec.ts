@@ -64,4 +64,12 @@ describe('AppComponent', () => {
     app.ngOnDestroy();
     expect(app.taskSubcribtion.unsubscribe).toHaveBeenCalled();
   });
+  it('should emit closeModal', () => {
+    app.showAddCard = true;
+    app.closeModal();
+    expect(app.showAddCard).toBe(false);
+    app.showListForm = true;
+    app.closeModal();
+    expect(app.showListForm).toBe(false);
+  });
 });

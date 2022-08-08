@@ -12,11 +12,16 @@ export class AddCardComponent {
   display: boolean = false;
   @Output()
   saveTask = new EventEmitter<string>();
+  @Output()
+  cancel = new EventEmitter<string>();
 
   cardForm = new FormGroup({
     taskName: new FormControl(''),
   });
   onSubmit() {
     this.saveTask.emit(this.cardForm.value);
+  }
+  closeModal() {
+    this.cancel.emit();
   }
 }

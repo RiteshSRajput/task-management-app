@@ -9,9 +9,8 @@
       required="true"
     />
   </div>
-  <div class="action">
-    <button type="submit" class="btn btn-danger" [disabled]="!cardForm.valid">
-      Add Task
-    </button>
+  <div class="actions">
+    <button type="submit" [disabled]="!cardForm.valid">Add Task</button>
+    <button class="cancel" (click)="closeModal()">Cancel</button>
   </div>
 </form>

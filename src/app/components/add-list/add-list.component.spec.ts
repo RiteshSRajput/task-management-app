@@ -50,4 +50,9 @@ describe('AddListComponent', () => {
     component.listName.setValue('test');
     component.onSubmit();
   });
+  it('should emit closeModal', () => {
+    spyOn(component.cancel, 'emit');
+    component.closeModal();
+    expect(component.cancel.emit).toHaveBeenCalledTimes(1);
+  });
 });

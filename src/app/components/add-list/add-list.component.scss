@@ -1,6 +1,9 @@
 :host {
   .action {
     padding-top: 20px;
+    button {
+      margin-right: 10px;
+    }
   }
   .error {
     color: red;

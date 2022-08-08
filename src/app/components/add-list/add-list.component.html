@@ -11,8 +11,7 @@
     />
   </div>
   <div class="action">
-    <button type="submit" class="btn btn-danger" [disabled]="!listForm.valid">
-      Add List
-    </button>
+    <button type="submit" [disabled]="!listForm.valid">Add List</button>
+    <button type="submit" (click)="closeModal()">Cancel</button>
   </div>
 </form>

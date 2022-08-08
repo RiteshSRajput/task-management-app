@@ -18,13 +18,19 @@
 <div id="addTaskModal" role="dialog" class="modal" *ngIf="showAddCard">
   <!-- Modal content -->
   <div class="modal-content">
-    <app-add-card (saveTask)="saveTask($event)"></app-add-card>
+    <app-add-card
+      (saveTask)="saveTask($event)"
+      (cancel)="closeModal()"
+    ></app-add-card>
   </div>
 </div>
 <!-- The Modal -->
 <div id="addListModal" role="dialog" class="modal" *ngIf="showListForm">
   <!-- Modal content -->
   <div class="modal-content">
-    <app-add-list (saveList)="saveList($event)"></app-add-list>
+    <app-add-list
+      (saveList)="saveList($event)"
+      (cancel)="closeModal()"
+    ></app-add-list>
   </div>
 </div>

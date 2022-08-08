@@ -58,4 +58,8 @@ export class AppComponent implements OnInit, OnDestroy {
       this.taskSubcribtion.unsubscribe();
     }
   }
+  closeModal() {
+    this.showAddCard = false;
+    this.showListForm = false;
+  }
 }

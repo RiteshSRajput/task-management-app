@@ -30,4 +30,9 @@ describe('AddCardComponent', () => {
     component.onSubmit();
     expect(component.saveTask.emit).toHaveBeenCalledTimes(1);
   });
+  it('should emit closeModal', () => {
+    spyOn(component.cancel, 'emit');
+    component.closeModal();
+    expect(component.cancel.emit).toHaveBeenCalledTimes(1);
+  });
 });
