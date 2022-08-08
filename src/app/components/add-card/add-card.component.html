@@ -1,0 +1,17 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="task-name">Task Name: </label>
+    <br />
+    <input
+      id="task-name"
+      type="text"
+      formControlName="taskName"
+      required="true"
+    />
+  </div>
+  <div class="action">
+    <button type="submit" class="btn btn-danger" [disabled]="!cardForm.valid">
+      Add Task
+    </button>
+  </div>
+</form>

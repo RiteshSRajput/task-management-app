@@ -1,0 +1,18 @@
+<form [formGroup]="listForm" (ngSubmit)="onSubmit()">
+  <div class="error" *ngIf="notUnique">List is already exist!</div>
+  <div>
+    <label for="list-name">List Name: </label>
+    <br />
+    <input
+      id="list-name"
+      type="text"
+      formControlName="listName"
+      required="true"
+    />
+  </div>
+  <div class="action">
+    <button type="submit" class="btn btn-danger" [disabled]="!listForm.valid">
+      Add List
+    </button>
+  </div>
+</form>
